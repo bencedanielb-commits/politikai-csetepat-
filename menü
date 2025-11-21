@@ -86,3 +86,72 @@
     <script src="main.js"></script>
 </body>
 </html>
+// Menü elemek
+const mainMenu = document.getElementById("menu");
+const settingsMenu = document.getElementById("settingsMenu");
+const controlMenu = document.getElementById("controlMenu");
+const audioMenu = document.getElementById("audioMenu");
+const brightnessMenu = document.getElementById("brightnessMenu");
+const creditsMenu = document.getElementById("creditsMenu");
+
+// Főmenü megjelenítése induláskor
+window.onload = () => {
+    mainMenu.style.display = "block";
+};
+
+// Játék indítása
+function startGame() {
+    alert("A játék hamarosan indul! A következő fájlokban írjuk meg a gameplay-t.");
+}
+
+// Beállítások menü
+function openSettings() {
+    mainMenu.style.display = "none";
+    settingsMenu.style.display = "block";
+}
+
+// Irányítás menü
+function openControls() {
+    settingsMenu.style.display = "none";
+    controlMenu.style.display = "block";
+}
+
+// Hang menü
+function openAudio() {
+    settingsMenu.style.display = "none";
+    audioMenu.style.display = "block";
+}
+
+// Fényerő menü
+function openBrightness() {
+    settingsMenu.style.display = "none";
+    brightnessMenu.style.display = "block";
+}
+
+// Készítők menü
+function openCredits() {
+    mainMenu.style.display = "none";
+    creditsMenu.style.display = "block";
+}
+
+// Vissza a főmenübe
+function goBack() {
+    hideAllMenus();
+    mainMenu.style.display = "block";
+}
+
+// Vissza a beállításokba
+function goBackSettings() {
+    hideAllMenus();
+    settingsMenu.style.display = "block";
+}
+
+// Minden menü elrejtése
+function hideAllMenus() {
+    mainMenu.style.display = "none";
+    settingsMenu.style.display = "none";
+    controlMenu.style.display = "none";
+    audioMenu.style.display = "none";
+    brightnessMenu.style.display = "none";
+    creditsMenu.style.display = "none";
+}
