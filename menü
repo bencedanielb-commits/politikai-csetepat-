@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>Játék Menü</title>
+    <style>
+        body {
+            background: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        #menu, #settingsMenu, #controlMenu, #audioMenu, #brightnessMenu, #creditsMenu {
+            display: none;
+            margin-top: 50px;
+        }
+
+        button {
+            padding: 15px 25px;
+            margin: 10px;
+            font-size: 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: #333;
+            color: white;
+        }
+
+        button:hover {
+            background: #555;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Főmenü</h1>
+
+    <div id="menu">
+        <button onclick="startGame()">Játék indítása</button>
+        <button onclick="openSettings()">Beállítások</button>
+        <button onclick="openCredits()">Készítők</button>
+    </div>
+
+    <!-- Beállítások -->
+    <div id="settingsMenu">
+        <h2>Beállítások</h2>
+        <button onclick="openControls()">Irányítás</button>
+        <button onclick="openAudio()">Hang</button>
+        <button onclick="openBrightness()">Fényerő</button>
+        <br><br>
+        <button onclick="goBack()">Vissza</button>
+    </div>
+
+    <!-- Irányítás -->
+    <div id="controlMenu">
+        <h2>Irányítás</h2>
+        <p>Itt fognak lenni az irányítási beállítások.</p>
+        <button onclick="goBackSettings()">Vissza</button>
+    </div>
+
+    <!-- Hang -->
+    <div id="audioMenu">
+        <h2>Hang beállítások</h2>
+        <p>Hangszint szabályozása (majd később).</p>
+        <button onclick="goBackSettings()">Vissza</button>
+    </div>
+
+    <!-- Fényerő -->
+    <div id="brightnessMenu">
+        <h2>Fényerő</h2>
+        <p>Itt lehet majd állítani a fényerőt.</p>
+        <button onclick="goBackSettings()">Vissza</button>
+    </div>
+
+    <!-- Készítők -->
+    <div id="creditsMenu">
+        <h2>Készítők</h2>
+        <p>A játékot készítette:</p>
+        <h3>Balogh Bence Dániel (alias Bali)</h3>
+        <p>Készítve GitHub-ban</p>
+        <br>
+        <button onclick="goBack()">Vissza</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
